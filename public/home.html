@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- CDN LINK -->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+
+    
+    <!-- UMD File Added -->
+
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+
+    <script type="text/babel">
+
+        //  Rendering message through ReactDOM
+        // ReactDOM.render("Welcome to React JS", document.getElementById("root"));
+
+
+        // Create ReactJS Component & Component function is always return function 
+        function NavBar()
+        {
+            return(
+                <div>
+                    <h3>Welcome</h3>
+                    <p>React18</p>
+                    <input type="text"/>
+                </div>
+            )
+
+        }
+
+        ReactDOM.render(<NavBar> </NavBar>,document.getElementById("root"));
+    </script>
+
+</head>
+<body>
+    <!-- noscript is check JavaScript is enable or not -->
+    <noscript>Please enable JavaScript on Your Browser.</noscript>
+
+    <!-- div with "root" ID render virtual DOM -->
+    <div id="root"></div>
+</body>
+</html>
