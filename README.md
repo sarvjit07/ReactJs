@@ -1,5 +1,6 @@
 # What libraries used
 {
+
   "name": "react-web-app",
 
   "version": "1.0.0",
@@ -7,7 +8,9 @@
   "main": "index.js",
 
   "scripts": {
+    
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
 
   "keywords": [],
@@ -29,8 +32,9 @@
     "react": "^18.3.1",
 
     "react-dom": "^18.3.1"
-    
+
   }
+
 }
 
 
