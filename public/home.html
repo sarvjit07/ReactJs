@@ -6,13 +6,13 @@
     <title>Home</title>
 
     <!-- CDN LINK -->
+    <!-- Order dependency issue with JavaScript files -->
     <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 
     
     <!-- UMD File Added -->
-
     <script src="../node_modules/react/umd/react.development.js"></script>
     <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../node_modules/@babel/standalone/babel.js"></script>
@@ -21,23 +21,46 @@
     <script type="text/babel">
 
         //  Rendering message through ReactDOM
-        // ReactDOM.render("Welcome to React JS", document.getElementById("root"));
+        //  ReactDOM.render("Welcome to React JS", document.getElementById("root"));
+
+        function Login(){
+            return(
+                <div>
+                    <h3>User Login</h3>
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text"/></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password"/></dd>
+                    </dl>
+                    <button>Login</button>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Login/>, document.getElementById("root"));
+
+
+
+
+
+
 
 
         // Create ReactJS Component & Component function is always return function 
-        function NavBar()
-        {
-            return(
-                <div>
-                    <h3>Welcome</h3>
-                    <p>React18</p>
-                    <input type="text"/>
-                </div>
-            )
+        // function NavBar()
+        // {
+        //     return(
+        //         <div>
+        //             <h3>Welcome</h3>
+        //             <p>React18</p>
+        //             <input type="text"/>
+        //         </div>
+        //     )
 
-        }
+        // }
 
-        ReactDOM.render(<NavBar> </NavBar>,document.getElementById("root"));
+        // ReactDOM.render(<NavBar> </NavBar>,document.getElementById("root"));
     </script>
 
 </head>
