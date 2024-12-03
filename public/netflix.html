@@ -47,14 +47,47 @@
         function NetflixHeader() {
             return (
                 <header className="p-3 d-flex justify-content-between">
-                    <div className="fs-1 fw-bold text-danger">NETFLIX</div>
+                    <div className="fs-1 fw-bold text-danger"><button data-bs-target="#navbar" data-bs-toggle="offcanvas" className="bi bi-justify btn btn-dark"></button> NETFLIX</div>
+                    <div className="offcanvas bg-dark text-white offcanvas-start" id="navbar">
+                        <div className="offcanvas-header">
+                            <h3>NetFlix</h3>
+                            <button className="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div className="offcanvas-body">
+                            <ul>
+                                <li>Movies</li>
+                                <li>Tv Shows</li>
+                                <li>Upcomig Shows</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div>
                         <span className="bg-light p-2 me-2 rounded rounded-2">
                             <span className="bi bi-translate">
                                 Language <span className="bi bi-chevron-down"></span>
                             </span>
                         </span>
-                        <button className="btn btn-danger">SignIn</button>
+                        <button data-bs-target="#signin" data-bs-toggle="modal" className="btn btn-danger">SignIn</button>
+                        <div className="modal fade" id="signin">
+                            <div className="modal-dialog">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h3 className="bi bi-person-fill">Netflix SIgnIn</h3>
+                                    </div>
+                                    <div className="modal-body">
+                                        <dl>
+                                            <dt>Email</dt>
+                                            <dd><input type="email" className="form-control"/></dd>
+                                            <dd>Password</dd>
+                                            <dd><input className="form-control" type="password"/></dd>
+                                        </dl>
+                                    </div>
+                                    <div className="modal-footer">
+                                        <button className="btn btn-danger" data-bs-dismiss="modal">LogIn</button>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
                     </div>
                 </header>
             );
